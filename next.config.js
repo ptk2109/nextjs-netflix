@@ -6,6 +6,16 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'src/styles')], // 2. sassOptions 옵션 추가
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'yts.mx',
+        port: '',
+        pathname: '/assets/images/movies/**',
+      },
+    ],
+  },
 }
 
 module.exports = nextConfig
