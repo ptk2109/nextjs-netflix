@@ -5,10 +5,9 @@ import { faAngleLeft, faAngleRight, faBell, faMagnifyingGlass, faCaretDown } fro
 
 
 
-export default function Home() {
+function MoveNav(){
   return (
-    <>
-      <nav className={style.nav}>
+    <nav className={style.nav}>
 				<div className={style.left}>
 					<div className={style.log}>
 						<a href="#"><Image src="/img/logo.png" width={100} height={30} alt="log" /></a>
@@ -54,121 +53,60 @@ export default function Home() {
             </div>
         </div>
 			</nav>
+  );
+}
 
-      <section className={style.section}>
-        <div className={style.content_list}>
-            <h1>한국이 만든 콘텐츠</h1>
-            <div class={style.slider}>
-              <div className={style.item}>
-                <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
-              </div>
-              <div className={style.item}>
-                <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
-              </div>
-              <div className={style.item}>
-                <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
-              </div>
-              <div className={style.item}>
-                <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
-              </div>
-              <div className={style.item}>
-                <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
-              </div>
-              <div className={style.item}>
-                <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
-              </div>
-              <div className={style.item}>
-                <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
-              </div>
-              <div className={style.item}>
-                <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
-              </div>
-              <div className={style.item}>
-                <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
-              </div>
-              <div className={style.item}>
-                <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
-              </div>
-              <div className={style.item}>
-                <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
-              </div>
-              <div className={style.item}>
-                <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
-              </div>
-              <div className={style.item}>
-                <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
-              </div>
-              <div className={style.item}>
-                <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
-              </div>
-              <div className={style.item}>
-                <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
-              </div>
-              <div className={style.item}>
-                <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
-              </div>
-              <div className={style.item}>
-                <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
-              </div>
-              <div className={style.item}>
-                <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
-              </div>
-              <div className={style.item}>
-                <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
-              </div>
-              <div className={style.item}>
-                <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
-              </div>
-              <div className={style.item}>
-                <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
-              </div>
-              <div className={style.item}>
-                <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
-              </div>
-              <div className={style.item}>
-                <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
-              </div>
-              <div className={style.item}>
-                <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
-              </div>
-              <div className={style.item}>
-                <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
-              </div>
-              <div className={style.item}>
-                <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
-              </div>
-              <div className={style.item}>
-                <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
-              </div>
-              <div className={style.item}>
-                <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
-              </div>
-              <div className={style.item}>
-                <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
-              </div>
-              <div className={style.item}>
-                <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
-              </div>
-              <div className={style.item}>
-                <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
-              </div>
-              <div className={style.item}>
-                <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
-              </div>
-              <div className={style.item}>
-                <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
-              </div>
-              <div className={style.item}>
-                <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
-              </div>
-              <div className={style.item}>
-                <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
-              </div>
+
+function MovieSection(prop){
+  return(
+    <section className={style.section}>
+      <div className={style.content_list}>
+          <h1>{prop.title}</h1>
+          <div class={style.slider}>
+            <div className={style.item}>
+              <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
             </div>
-            <div className={style.prev}><FontAwesomeIcon icon={faAngleLeft}  /></div>
-            <div className={style.next}><FontAwesomeIcon icon={faAngleRight}  /></div>
-        </div>
-      </section> 
+            <div className={style.item}>
+              <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
+            </div>
+            <div className={style.item}>
+              <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
+            </div>
+            <div className={style.item}>
+              <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
+            </div>
+            <div className={style.item}>
+              <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
+            </div>
+            <div className={style.item}>
+              <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
+            </div>
+            <div className={style.item}>
+              <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
+            </div>
+            <div className={style.item}>
+              <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
+            </div>
+            <div className={style.item}>
+              <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
+            </div>
+            <div className={style.item}>
+              <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
+            </div>
+          </div>
+          <div className={style.prev}><FontAwesomeIcon icon={faAngleLeft}  /></div>
+          <div className={style.next}><FontAwesomeIcon icon={faAngleRight}  /></div>
+      </div>
+    </section> 
+  )
+}
+
+export default function Home() {
+  return (
+    <>
+      <MoveNav />
+      <MovieSection title="한국이 만든 콘텐츠"/>
+      
     </>
   )
   
