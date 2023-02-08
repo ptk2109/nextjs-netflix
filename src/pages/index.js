@@ -2,112 +2,67 @@ import Image from 'next/image';
 import style from '@/styles/Home.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft, faAngleRight, faBell, faMagnifyingGlass, faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import Head from "next/head";
+import Seo from '../components/Seo';
+import { useEffect, useState } from 'react';
 
 
 
-function MoveNav(){
+// export async function getStaticProps() {
+//   const url = "https://yts.mx/api/v2/list_movies.json?minimum_rating=9&sort_by=year";
+//   const res = await fetch(url);
+//   const posts = await res.json();
+
+//   return {
+//     props: {
+//       posts,
+//     }
+//   };
+// }
+
+function MovieSection(prop) {
+  const [movies, setMovies] = useState([]);
+  useEffect(() => {
+    (async () => {
+      const { results } = await (await fetch(
+        `/api/movies`    // 실제URL은 next.config.js에 존재함. (파라미터 중 개인키가 있어서 URL 숨기기 위함)
+      )).json();
+      setMovies(results);
+    })();
+  }, []);
+
+
   return (
-    <nav className={style.nav}>
-				<div className={style.left}>
-					<div className={style.log}>
-						<a href="#"><Image src="/img/logo.png" width={100} height={30} alt="log" /></a>
-					</div>
-					<div class={style.mobile_menu}>메뉴</div>
-					<ul class={style.menu_list}>
-							<li>
-									<a href="#">홈</a>
-							</li>
-							<li>
-									<a href="#">시리즈</a>
-							</li>
-							<li>
-									<a href="#">영화</a>
-							</li>
-							<li>
-									<a href="#">NEW! 요즘 대세 콘텐츠</a>
-							</li>
-							<li>
-									<a href="#">내가 찜한 콘텐츠</a>
-							</li>
-					</ul>
-				</div>
-
-        <div className={style.right}>
-            <div className={[style.icon, style.search].join(" ")}>
-                <div className={style.search_bar}>
-                    <FontAwesomeIcon icon={faMagnifyingGlass} />
-                    <input type="text" placeholder="제목, 사람, 장르"/>
-                </div>
-            </div>
-            <div className={[style.icon, style.kids].join(" ")}>
-                <a href="#">키즈</a>
-            </div>
-            <div className={[style.icon, style.bell].join(" ")}>
-                <a href="#"><FontAwesomeIcon icon={faBell}  /></a>
-            </div>
-            <div className={[style.icon, style.profile].join(" ")}>
-                <a href="#">
-                    <div className={style.avatar_box}></div>
-                    <FontAwesomeIcon icon={faCaretDown}  />
-                </a>
-            </div>
-        </div>
-			</nav>
-  );
-}
-
-
-function MovieSection(prop){
-  return(
     <section className={style.section}>
       <div className={style.content_list}>
-          <h1>{prop.title}</h1>
-          <div class={style.slider}>
-            <div className={style.item}>
-              <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
+        <h1>{prop.title}</h1>
+        {!movies && <h4>Loading...</h4>}
+
+        {movies &&
+
+          <div className={style.slider}>
+
+
+          {movies?.map( (_movie, _idx) => (
+            <div key={_movie.id} className={style.item}>
+              <Image src={`https://image.tmdb.org/t/p/w500/${_movie.poster_path}`} width={256} height={384} alt="log" />
             </div>
-            <div className={style.item}>
-              <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
-            </div>
-            <div className={style.item}>
-              <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
-            </div>
-            <div className={style.item}>
-              <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
-            </div>
-            <div className={style.item}>
-              <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
-            </div>
-            <div className={style.item}>
-              <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
-            </div>
-            <div className={style.item}>
-              <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
-            </div>
-            <div className={style.item}>
-              <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
-            </div>
-            <div className={style.item}>
-              <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
-            </div>
-            <div className={style.item}>
-              <Image src="https://yts.mx/assets/images/movies/carrie_underwood_the_blown_away_tour_live_2013/medium-cover.jpg" width={250} height={150} alt="log" />
-            </div>
+          ))}
           </div>
-          <div className={style.prev}><FontAwesomeIcon icon={faAngleLeft}  /></div>
-          <div className={style.next}><FontAwesomeIcon icon={faAngleRight}  /></div>
+        }
+        <div className={style.prev}><FontAwesomeIcon icon={faAngleLeft} /></div>
+        <div className={style.next}><FontAwesomeIcon icon={faAngleRight} /></div>
       </div>
-    </section> 
+    </section>
   )
 }
 
 export default function Home() {
   return (
     <>
-      <MoveNav />
-      <MovieSection title="한국이 만든 콘텐츠"/>
-      
+      <Seo title="Home" />
+      <MovieSection title="인기있는 콘텐츠" />
     </>
   )
-  
+
 }
