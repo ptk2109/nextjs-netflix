@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const path = require('path'); // 1. path 선언
 
-// key 까먹었다면, https://api.themoviedb.org -> 설정 -> api 에 가면 key 받을 수 있음.
+// key 까먹었다면, https://api.themoviedb.org -> 회원가입 -> 로그인 ->  설정 -> api -> 등록 -> 하면 api 받을 수 있다.
 const API_KEY = process.env.MOVIE_API_KEY;
 
 const nextConfig = {
